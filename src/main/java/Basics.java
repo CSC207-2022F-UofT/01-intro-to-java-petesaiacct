@@ -176,8 +176,9 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
         int lengthOfArray = arr.length;
-        for (int i = 0; i < lengthOfArray; i++) {
-            current_sum += arr[i];
+        for (int i = 0; i <lengthOfArray; i++) {
+            current_sum = current_sum + arr[i];
+            System.out.println(current_sum);
         }
 
         return current_sum;
