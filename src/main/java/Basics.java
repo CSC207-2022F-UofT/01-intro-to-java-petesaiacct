@@ -99,7 +99,7 @@ public class Basics {
          * Current count: 0
          */
         for (int i = 10; i >= 0; i--){
-            System.out.println("Current count: " +i );
+            System.out.println("Current count: " + i );
         }
 
     }
@@ -145,8 +145,8 @@ public class Basics {
 
         // Fill in the rest of the body here
         String[] wordList = to_split.split(" ");
-        for (int i = 0; i <= 6; i++) {
-            ret.append(wordList[i].charAt(0));
+        for (String x : wordList) {
+            ret.append(x.charAt(0));
         }
 
         return ret.toString();
@@ -177,8 +177,10 @@ public class Basics {
          */
         int lengthOfArray = arr.length;
         for (int i = 0; i <lengthOfArray; i++) {
-            current_sum = current_sum + arr[i];
-            System.out.println(current_sum);
+            if(i % 2==1){
+                current_sum = current_sum + arr[i];
+            }
+
         }
 
         return current_sum;
